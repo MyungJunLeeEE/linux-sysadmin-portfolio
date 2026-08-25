@@ -13,11 +13,14 @@ Rocky Linux 환경에서 진행한 스토리지 관리(RAID, LVM, Quota) 및 시
 
 ## 📌 주요 실습 목차 (Table of Contents)
 
-### 1. 🛡️ [Software RAID 1 & 5 구축 및 장애 복구](./SW_RAID_1&5/README.md)
+### 1. 🛡️ Software RAID 구축 및 장애 복구 (Software RAID 1 & 5)
 * **주요 내용:** 
-  * `mdadm`을 활용한 RAID 1(Mirroring) 및 RAID 5(Distributed Parity) 구성
-  * 의도적 디스크 장애 발생 및 데이터 무결성 검증, 디스크 교체 및 리빌딩
-* **상세 보러가기:** [`SW_RAID_1&5/README.md`](./SW_RAID_1&5/README.md)
+  * `mdadm`을 활용한 Software RAID 1 (Mirroring) 및 RAID 5 (Distributed Parity) 구축
+  * 의도적 디스크 장애 발생 시 패리티/미러 기반 데이터 무결성 및 연속 가용성 검증
+  * 결함 디스크 강제 이탈, 신규 디스크 추가 및 백그라운드 자동 리빌딩(Rebuilding)
+* **상세 보고서:**
+  * 🔴 [RAID 1 (Mirroring) 구축 및 복구 실습](./SW_RAID_1&5/raid1/README.md)
+  * 🟡 [RAID 5 (Distributed Parity) 구축 및 복구 실습](./SW_RAID_1&5/raid5/README.md)
 
 ---
 
@@ -50,9 +53,8 @@ linux-sysadmin-portfolio/
 │   └── README.md
 │
 ├── SW_RAID_1&5/                # RAID 1 & 5 실습 폴더
-│   ├── raid1/
-│   ├── raid5/
-│   └── README.md
+│   ├── raid1/                  # RAID 1 상세 실습 보고서 및 이미지
+│   └── raid5/                  # RAID 5 상세 실습 보고서 및 이미지
 │
 ├── quota/                      # Disk Quota 실습 폴더
 │   ├── 1.add_1disk&partition.png
